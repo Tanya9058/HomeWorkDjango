@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %} {{ need_rubric.name }} {% endblock %}
+{% block content %}
+
+  {% for n in news %}
+    <h3>{{ n.title }}</h3>
+    <h4>{{ n.content }}</h4>
+    <h5>{{ n.published }}</h5>
+  {% endfor %}
+
+{% endblock %}

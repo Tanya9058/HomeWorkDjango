@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <a href="{% url 'mane_page' %}">Главная</a>
+    {% for rub in rubrics %}
+        <a href="{% url 'rubric_page' rub.pk %}" >{{ rub.name }}</a>
+    {% endfor %}
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

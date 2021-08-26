@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Главная{% endblock %}
+{% block content %}
+
+    {% for n in news %}
+        <h5><a href="{% url 'rubric_page' n.rubric.pk %}" >{{ n.rubric.name }}</a></h5>
+        <h3>{{ n.title }}</h3>
+        <h4>{{ n.content }}</h4>
+        <h5>{{ n.published }}</h5>
+    {% endfor %}
+
+{% endblock %}
